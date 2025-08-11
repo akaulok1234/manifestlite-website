@@ -1,5 +1,14 @@
+/* Remove left margin/padding from navbar-brand so logo sits flush left */
+.navbar-brand {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
 .navbar-brand .logo {
-    max-height: 50px;
+    max-height: 50px; /* Compact logo size for navbar */
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
     border-radius: 50%; /* Optional for rounded logo */
 }
 
@@ -43,7 +52,7 @@
 }
 
 .hero {
-    background: url('./mohamed-nohassi-odxB5oIG_iA-unsplash.jpg') no-repeat center center/cover;
+    background: url('./john-price-RAZQiZOX3mU-unsplash.jpg') no-repeat center center/cover;
     position: relative;
     height: 100vh;
     display: flex;
@@ -211,27 +220,8 @@
 }
 
 
-.video-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-}
 
-.sermon-video {
-    width: 100%;
-    max-width: 900px;
-    height: 600px;
-    border-radius: 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Subtle depth for video */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.sermon-video:hover {
-    transform: scale(1.02); /* Gentle zoom effect */
-    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
-}
 
 /* Transition Between Sections */
 .prayer-section + .sermons-section {
@@ -269,27 +259,7 @@
     margin-bottom: 1.5rem;
 }
 
-.declaration-card {
-    overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.declaration-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-.declaration-img {
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-
-.declaration-img:hover {
-    opacity: 0.8;
-}
 
 /* Modal Styling */
 .modal-content {
@@ -301,7 +271,7 @@
 /* ======= ABOUT PAGE STYLING ======= */
 /* ✅ General Page Styling */
 body {
-    background: url('./marek-piwnicki-dvIFWfpgLYY-unsplash.jpg') no-repeat center center/cover;
+    background: url('./nathan-dumlao-ciO5L8pin8A-unsplash.jpg') no-repeat center center/cover;
     background-attachment: fixed; /* Keeps the background in place */
     background-size: cover;
     color: white;
@@ -399,11 +369,13 @@ footer {
 .navbar {
     background-color: #222; /* Match dark theme */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 60px; /* Thicker navbar bar at the top */
+    object-fit: cover;
 }
 
 /* ✅ Ensure content doesn’t go behind navbar */
 body {
-    padding-top: 70px; /* Adjust so content starts below the navbar */
+    padding-top: 60px; /* Compact padding for smaller navbar */
 }
 /* Pastor Section Styling */
 .pastor-section {
@@ -546,4 +518,47 @@ body {
 /* Add spacing below hero */
 .hero-section + .container {
     margin-top: 80px; /* Adds spacing between hero and Outreach Activities */
+}
+.declarations-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+#sermonCarousel video {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+}
+.declarations-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.declarations-scroll img {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.declarations-scroll img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 990px) {
+  .navbar-brand img {
+    height: 60px !important; /* or a smaller value */
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #000;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+  }
 }

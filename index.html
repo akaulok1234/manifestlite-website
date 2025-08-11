@@ -1,196 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ManifestLite</title>
-    <!-- Bootstrap JS (for dropdowns & mobile navbar toggling) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manifest Lite Ministries | Home</title>
+  <meta name="description" content="Manifest Lite Ministries is a faith-based community dedicated to sharing the gospel of Jesus Christ worldwide.">
+  <link rel="canonical" href="https://manifestlite.com/">
+  <meta property="og:title" content="Manifest Lite Ministries | Home">
+  <meta property="og:description" content="Manifest Lite Ministries is a faith-based community dedicated to sharing the gospel of Jesus Christ worldwide.">
+  <meta property="og:image" content="https://manifestlite.com/IMG_0869.PNG">
+  <meta property="og:url" content="https://manifestlite.com/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="./IMG_0868.jpeg" alt="Manifest Lite Ministries Logo" class="logo">
+  <!-- Main Navbar (from pastor.html, improved) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-2 fixed-top">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+  <img src="./IMG_0869.PNG" alt="Manifest Lite Logo" height="100" style="border-radius: 50%; object-fit: cover;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end bg-black" aria-labelledby="aboutDropdown">
+                <li>
+                  <a class="dropdown-item text-white" id="aboutManifestLite" href="about.html">
+                    About Manifest Lite
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" id="meetPastor" href="pastor.html">
+                    Meet Our Pastor
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <script>
+              // Highlight gold if on about.html or pastor.html
+              const path = window.location.pathname;
+              if (path.endsWith('about.html')) {
+                document.getElementById('aboutManifestLite').classList.add('bg-warning', 'fw-bold');
+              }
+              if (path.endsWith('pastor.html')) {
+                document.getElementById('meetPastor').classList.add('bg-warning', 'fw-bold');
+              }
+            </script>
+          <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+          <li class="nav-item"><a class="nav-link" href="declarations.html">Declarations</a></li>
+          <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
+          <!-- Events removed, replaced with Zoom link -->
+          <li class="nav-item">
+            <a class="nav-link text-warning fw-bold" href="https://us02web.zoom.us/j/2429800825?pwd=WURDenVtZkZiNHNMM21OUDR6SXlSUT09&omn=82957588890" target="_blank">
+              <i class="fas fa-video me-2"></i> Join Live Prayer
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    
-                    <!-- About Us Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            About Us
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="about.html">About Manifest Lite</a></li>
-                            <li><a class="dropdown-item" href="pastor.html">Meet Our Pastor</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#prayer">Prayer Times</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sermons">Latest Sermon</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#declarations">Declarations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    
-    
-    <section id="home" class="hero text-white">
-        <div class="overlay">
-            <div class="container text-center">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                <h1 class="display-4 fw-bold">Welcome to Manifest Lite Ministries</h1>
-                <p class="lead">Preaching the gospel of Jesus Christ to everyone in all parts of the world.</p>
-                <div class="mt-4">
-                    <a href="about.html" class="btn btn-primary btn-lg px-4 me-3">Learn More</a>
-                    <a href="#prayer" class="btn btn-outline-light btn-lg px-4">Join Us</a>
-                </div>
-
-                <div class="social-links mt-4">
-                    <a href="https://www.facebook.com/people/Manifest_lite/100064762178334/?mibextid=wwXIfr&rdid=4pIG3fJDXix7AtEb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DhQLwnkBU%2F%3Fmibextid%3DwwXIfr" target="_blank" class="me-3 text-white"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="https://www.instagram.com/manifest_lite01/" target="_blank" class="me-3 text-white"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="https://www.youtube.com/channel/UCUjBQhTtZYYz7IeLeSNTeeA" target="_blank" class="me-3 text-white"><i class="fab fa-youtube fa-2x"></i></a>
-                    <a href="https://www.threads.net/@nduloks" target="_blank" class="text-white"><i class="fab fa-twitter fa-2x"></i></a>
-                </div>
-                </div>
-            </div>
-        </section>
-
-
-
-    <section id="prayer" class="py-5 prayer-section">
-        <div class="container text-center">
-            <!-- Icon or Graphic -->
-            <div class="mb-4">
-                <i class="fas fa-praying-hands fa-3x text-warning"></i>
-            </div>
-    
-            <!-- Section Heading -->
-            <h2 class="fw-bold text-white mb-3">Join Our Live Prayer Sessions</h2>
-    
-            <!-- Description -->
-            <p class="lead text-light mb-4">
-                Connect with God and the Manifest Lite community during our uplifting prayer sessions:
-            </p>
-    
-            <!-- Prayer Times -->
-            <ul class="list-unstyled fs-5 text-white">
-                <li><strong>Mondays:</strong> 6:00 AM - 6:30 AM</li>
-                <li><strong>Saturdays:</strong> 6:00 AM - 6:40 AM</li>
-            </ul>
-    
-            <!-- Zoom Button -->
-            <div class="mt-4">
-                <a href="https://us02web.zoom.us/j/2429800825?pwd=WURDenVtZkZiNHNMM21OUDR6SXlSUT09&omn=82957588890
-" target="_blank" class="btn btn-warning btn-lg px-5 shadow-lg">
-                    <i class="fas fa-video me-2"></i> Join Prayer on Zoom
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="sermons" class="sermons-section">
-        <div class="container">
-            <h2>Latest Sermon</h2>
-            <p>Be uplifted and inspired by our latest sermon, <strong>"The Lord Shall Remeber You"</strong></p>
-            <div class="video-container">
-                <video class="sermon-video" controls>
-                    <source src="./newvide.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </section>
-    
-    
-   
-  <section id="declarations" class="declarations-section">
+  <!-- Hero Section -->
+  <header class="hero text-center">
     <div class="container">
-        <h2 class="text-center">Manifest Declarations</h2>
-        <p class="text-center text-light">Be inspired by faith-filled messages from Manifest Lite.</p>
+      <h1 class="display-4 fw-bold">Welcome to Manifest Lite Ministries</h1>
+      <p class="lead">Preaching the love and teachings of Jesus Christ across the world.</p>
+      <div class="mt-4">
+  <a class="btn btn-warning me-3" href="https://us02web.zoom.us/j/2429800825?pwd=WURDenVtZkZiNHNMM21OUDR6SXlSUT09&omn=82957588890" target="_blank" aria-label="Join our live prayer session on Zoom">Join Us</a>
+        <a class="btn btn-outline-light" href="sermons.html">Watch Sermons</a>
+      </div>
+    </div>
+  </header>
 
-        <div class="row">
-            <!-- Declaration 1 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="declaration-card">
-                    <img src="./manifesting.png" alt="Divine Enablement" class="declaration-img" data-bs-toggle="modal" data-bs-target="#modal1">
-                </div>
-            </div>
-
-            <!-- Declaration 2 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="declaration-card">
-                    <img src="./manifest3.png" alt="Overflow of Blessings" class="declaration-img" data-bs-toggle="modal" data-bs-target="#modal2">
-                </div>
-            </div>
-
-            <!-- Declaration 3 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="declaration-card">
-                    <img src="./manifest6.png" alt="His love makes you rich" class="declaration-img" data-bs-toggle="modal" data-bs-target="#modal3">
-                </div>
-            </div>
-
-            <!-- Declaration 4 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="declaration-card">
-                    <img src="./manifest1.png" alt="The Lord Shall Lift You" class="declaration-img" data-bs-toggle="modal" data-bs-target="#modal4">
-                </div>
-            </div>
+  <!-- Intro Section -->
+  <section class="py-5 bg-dark text-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="text-warning">Intro to Manifest Lite</h2>
+          <div class="slash-line"></div>
+          <p class="mt-3">
+            Manifest Lite Ministries is a Christ-centered community committed to preaching the gospel,
+            transforming lives, and walking alongside believers in their journey of faith. We believe
+            in creating a space where everyone—no matter their background—can encounter God's love,
+            discover their purpose, and grow spiritually.
+          </p>
+          <p>
+            Through worship, prayer, and service, we aim to uplift and empower individuals to live
+            boldly for Christ in every area of their lives.
+          </p>
+          <a href="about.html" class="btn btn-outline-warning">Learn More</a>
         </div>
-    </div>
-</section>
-<!-- Modal for Declaration 1 -->
-<div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <img src="./manifesting.png" class="img-fluid">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+          <video src="./newvide.mp4" controls poster="intro.jpg" class="rounded shadow"
+            style="max-width: 400px; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: contain;"></video>
+          </video>
         </div>
+      </div>
     </div>
-</div>
+  </section>
 
-<!-- Modal for Declaration 2 -->
-<div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <img src="./manifest3.png" class="img-fluid">
+  <!-- Prayer + Declarations Section -->
+  <section class="py-5 bg-black text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="text-warning">Join Our Live Prayer Sessions</h2>
+          <div class="slash-line"></div>
+          <p class="mt-3">
+            Connect with God and the Manifest Lite community<br>
+            during our uplifting prayer sessions:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li><strong>Mondays:</strong> 6:00 AM - 6:30 AM <span class="text-warning fw-bold">(Nigerian Time, WAT)</span></li>
+            <li><strong>Saturdays:</strong> 6:00 AM - 6:40 AM <span class="text-warning fw-bold">(Nigerian Time, WAT)</span></li>
+          </ul>
+          <a href="https://us02web.zoom.us/j/2429800825?pwd=WURDenVtZkZiNHNMM21OUDR6SXlSUT09&omn=82957588890" target="_blank" class="btn btn-warning px-4 mt-3">
+            <i class="fas fa-video me-2"></i> Join on Zoom
+          </a>
         </div>
-    </div>
-</div>
-
-<!-- Modal for Declaration 3 -->
-<div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <img src="./manifest6.png" class="img-fluid">
+        <div class="col-md-6">
+            <h3 class="text-warning">Declarations</h3>
+          <div class="row g-2">
+            <div class="col-4"><img src="manifest1.png" class="img-fluid rounded"></div>
+            <div class="col-4"><img src="manifest11.JPG" class="img-fluid rounded"></div>
+            <div class="col-4"><img src="manifesting.png" class="img-fluid rounded"></div>
+          </div>
+          <a href="declarations.html" class="text-warning mt-2 d-block">View More</a>
         </div>
+      </div>
     </div>
-</div>
+  </section>
 
-<!-- Modal for Declaration 4 -->
-<div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <img src="./manifest1.png" class="img-fluid">
-        </div>
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-4">
+    <p>© 2025 Manifest Lite Ministries | manifestlite91@gmail.com | +2347087378900</p>
+    <div class="social-icons">
+      <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
     </div>
-</div>
+  </footer>
 
-
-    
-<footer id="footer" class="bg-dark text-white py-4">
-  
-        <p>&copy; 2025 Manifest Lite Ministries. All Rights Reserved.</p>
-        <p>Contact: manifestlite91@gmail.com | +2347087378900</p>
-    </div>
-</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -4,43 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Manifest Lite Ministries</title>
+    <link rel="canonical" href="https://manifestlite.com/about.html">
+    <meta property="og:title" content="About Us - Manifest Lite Ministries">
+    <meta property="og:description" content="Learn about Manifest Lite Ministries, our mission, and our core values.">
+    <meta property="og:image" content="https://manifestlite.com/IMG_0869.PNG">
+    <meta property="og:url" content="https://manifestlite.com/about.html">
+    <meta property="og:type" content="website">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="./IMG_0868.jpeg" alt="Manifest Lite Ministries Logo" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item"><a class="nav-link" href="index.html#service-times">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            About Us
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="about.html">About Manifest Lite</a></li>
-                            <li><a class="dropdown-item" href="pastor.html">Meet Our Pastor</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#prayer">Prayer Times</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#sermons">Sermons</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#declarations">Declarations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-                </ul>
+        <!-- Main Navbar (synchronized with index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-2 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./IMG_0869.PNG" alt="Manifest Lite Logo" height="100" style="border-radius: 50%; object-fit: cover;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end bg-black" aria-labelledby="aboutDropdown">
+                                    <li>
+                                        <a class="dropdown-item text-white" id="aboutManifestLite" href="about.html">
+                                            About Manifest Lite
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item text-white" id="meetPastor" href="pastor.html">
+                                            Meet Our Pastor
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <script>
+                                // Highlight gold if on about.html or pastor.html
+                                const path = window.location.pathname;
+                                if (path.endsWith('about.html')) {
+                                    document.getElementById('aboutManifestLite').classList.add('bg-warning', 'fw-bold');
+                                }
+                                if (path.endsWith('pastor.html')) {
+                                    document.getElementById('meetPastor').classList.add('bg-warning', 'fw-bold');
+                                }
+                            </script>
+                        <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="declarations.html">Declarations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
+                        <!-- Events removed, replaced with Zoom link -->
+                        <li class="nav-item">
+                            <a class="nav-link text-warning fw-bold" href="https://us02web.zoom.us/j/2429800825?pwd=WURDenVtZkZiNHNMM21OUDR6SXlSUT09&omn=82957588890" target="_blank">
+                                <i class="fas fa-video me-2"></i> Join Live Prayer
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     
     <!-- About Us Content -->
     <section class="about-page">
@@ -97,19 +123,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>Follow Us:</p>
-            <div class="social-icons mb-3">
-                <a href="https://www.facebook.com/people/Manifest_lite/100064762178334/?mibextid=wwXIfr&rdid=4pIG3fJDXix7AtEb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DhQLwnkBU%2F%3Fmibextid%3DwwXIfr" target="_blank" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/manifest_lite01/" target="_blank" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UCUjBQhTtZYYz7IeLeSNTeeA" target="_blank" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+        <!-- Footer (Standard) -->
+        <footer class="bg-black text-white text-center py-4">
+            <p>© 2025 Manifest Lite Ministries | manifestlite91@gmail.com | +2347087378900</p>
+            <div class="social-icons">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
             </div>
-            <p>&copy; 2025 Manifest Lite Ministries. All Rights Reserved.</p>
-            <p>Contact: manifestlite@gmail.com | +2347087378900</p>
-        </div>
-    </footer>
+        </footer>
 
 </body>
 </html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manifest Lite Ministries | Sermons</title>
+  <meta name="description" content="Manifest Lite Ministries is a faith-based community dedicated to sharing the gospel of Jesus Christ worldwide.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Main Navbar (from pastor.html, improved) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 fixed-top">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="./IMG_0869.PNG" alt="Manifest Lite Logo" height="100" style="border-radius: 50%; object-fit: cover;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end bg-black" aria-labelledby="aboutDropdown">
+                <li>
+                  <a class="dropdown-item text-white" id="aboutManifestLite" href="about.html">
+                    About Manifest Lite
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" id="meetPastor" href="pastor.html">
+                    Meet Our Pastor
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <script>
+              // Highlight gold if on about.html or pastor.html
+              const path = window.location.pathname;
+              if (path.endsWith('about.html')) {
+                document.getElementById('aboutManifestLite').classList.add('bg-warning', 'fw-bold');
+              }
+              if (path.endsWith('pastor.html')) {
+                document.getElementById('meetPastor').classList.add('bg-warning', 'fw-bold');
+              }
+            </script>
+          <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+          <li class="nav-item"><a class="nav-link" href="declarations.html">Declarations</a></li>
+          <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
+          <!-- Events removed, replaced with Zoom link -->
+          <li class="nav-item">
+            <a class="nav-link text-warning fw-bold" href="https://us02web.zoom.us/j/2429800825?pwd=WURDenVtZkZiNHNMM21OUDR6SXlSUT09&omn=82957588890" target="_blank">
+              <i class="fas fa-video me-2"></i> Join Live Prayer
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   <section id="sermons" class="sermons-section py-5 bg-dark">
+  <div class="container">
+    <h2 class="text-center mb-4 text-warning fw-bold">Latest Sermons</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div id="sermonCarousel" class="carousel slide shadow-lg rounded" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+            <div class="carousel-item active text-center">
+              <video class="d-block w-100 rounded mb-3" controls>
+                <source src="./manifestvid10.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+                <h5 class="text-warning fw-bold sermon-title">Series of Praise</h5>
+            </div>
+            <div class="carousel-item text-center">
+              <video class="d-block w-100 rounded mb-3" controls>
+                <source src="./ce0cf7c0-6d3f-42ff-bb02-44d52e6ecb6d.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+                <h5 class="text-warning fw-bold sermon-title">Divine Increase</h5>
+            </div>
+            <div class="carousel-item text-center">
+              <video class="d-block w-100 rounded mb-3" controls>
+                <source src="./manifestvid3.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+                <h5 class="text-warning fw-bold sermon-title">Series of Praise</h5>
+            </div>
+      <div class="carousel-item text-center">
+        <video class="d-block w-100 rounded mb-3" controls>
+          <source src="./9156d085-3d8c-487d-97a7-2298efa48428.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h5 class="text-warning fw-bold sermon-title">Greater Grace</h5>
+      </div>
+            <!-- Add more video blocks as needed -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#sermonCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#sermonCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 justify-content-center">
+      <div class="col-lg-8 text-center">
+  <p class="lead text-warning fw-bold">Be inspired by the Word of God. Browse our latest sermons and grow in faith!</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-white text-center py-4">
+  <p>© 2025 Manifest Lite Ministries | manifestlite91@gmail.com | +2347087378900</p>
+  <div class="social-icons">
+    <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Prevent the carousel from advancing when you click inside the video
+  document.querySelectorAll('#sermonCarousel video').forEach(video => {
+    video.addEventListener('click', function (e) {
+      e.stopPropagation(); // Don’t trigger a slide change on video click
+    });
+  });
+
+  // Pause all videos when the slide changes so multiple audio tracks don’t overlap
+  const carousel = document.getElementById('sermonCarousel');
+  if (carousel) {
+    carousel.addEventListener('slide.bs.carousel', function () {
+      const videos = carousel.querySelectorAll('video');
+      videos.forEach(video => video.pause());
+    });
+  }
+</script>

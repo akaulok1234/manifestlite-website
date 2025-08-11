@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outreach - Manifest Lite Ministries</title>
+    <link rel="canonical" href="https://manifestlite.com/outreach.html">
+    <meta property="og:title" content="Outreach - Manifest Lite Ministries">
+    <meta property="og:description" content="Discover our outreach activities and how we serve the community at Manifest Lite Ministries.">
+    <meta property="og:image" content="https://manifestlite.com/jesuswalk.jpeg">
+    <meta property="og:url" content="https://manifestlite.com/outreach.html">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -11,128 +17,151 @@
 </head>
 <body>
 
-   <!-- Navbar at the Top -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Main Navbar (synchronized with index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-2 fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-            <img src="./IMG_0868.jpeg" alt="Manifest Lite Ministries Logo" class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#service-times">Service Times</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#sermons">Sermons</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#declarations">Declarations</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-            </ul>
+            <a class="navbar-brand" href="index.html">
+                <img src="./IMG_0869.PNG" alt="Manifest Lite Logo" height="100" style="border-radius: 50%; object-fit: cover;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end bg-black" aria-labelledby="aboutDropdown">
+                                <li>
+                                    <a class="dropdown-item text-white" id="aboutManifestLite" href="about.html">
+                                        About Manifest Lite
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" id="meetPastor" href="pastor.html">
+                                        Meet Our Pastor
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <script>
+                            // Highlight gold if on about.html or pastor.html
+                            const path = window.location.pathname;
+                            if (path.endsWith('about.html')) {
+                                document.getElementById('aboutManifestLite').classList.add('bg-warning', 'fw-bold');
+                            }
+                            if (path.endsWith('pastor.html')) {
+                                document.getElementById('meetPastor').classList.add('bg-warning', 'fw-bold');
+                            }
+                        </script>
+                    <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="declarations.html">Declarations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
+                    <!-- Events removed, replaced with Zoom link -->
+                    <li class="nav-item">
+                        <a class="nav-link text-warning fw-bold" href="https://us02web.zoom.us/j/2429800825?pwd=WURDenVtZkZiNHNMM21OUDR6SXlSUT09&omn=82957588890" target="_blank">
+                            <i class="fas fa-video me-2"></i> Join Live Prayer
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
     
 
 <!-- Hero Section -->
-<header class="hero-section">
-    <div class="overlay"></div>
-    <div class="container text-center">
-        <h1 class="golden-title">Our Outreach Mission</h1>
-        <p class="hero-subtitle">
-            "Spreading Christ’s love through service, compassion, and community impact. 
-            Join us in making a difference."
-        </p>
-        <a href="mailto:manifestlite91@gmail.com?subject=Interested in future Outreach Ministry" class="btn btn-lg btn-custom">
-            Join Our Mission
-        </a>
+<header class="hero-section mb-0" style="background: url('./jake-nackos-SM1UB_d2sU4-unsplash.jpg') center/cover no-repeat; color: gold; text-align: center; padding: 160px 0 360px 0; position: relative;">
+    <div class="overlay" style="background: rgba(0,0,0,0.5); position: absolute; top:0; left:0; width:100%; height:100%; z-index:1;"></div>
+    <div class="container position-relative" style="z-index:2;">
+        <h1 class="golden-title mb-3">Our Outreach Mission</h1>
+        <p class="hero-subtitle mb-4">Spreading Christ’s love through service, compassion, and community impact.<br>Join us in making a difference.</p>
+        <a href="mailto:manifestlite91@gmail.com?subject=Interested in future Outreach Ministry" class="btn btn-lg btn-custom">Join Our Mission</a>
     </div>
 </header>
 
 
 
     <!-- Outreach Activities -->
-    <section class="container my-5">
-        <h2 class="text-center golden-title">Our Outreach Activities</h2>
-        <div class="row g-4">
+    <section class="container my-5 flex-grow-1">
+        <h2 class="text-center golden-title mb-4">Our Outreach Activities</h2>
+        <div class="row g-4 justify-content-center">
             <!-- Outreach Item -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="card h-100 shadow">
                     <img src="./motherlessbaby2.jpeg" class="card-img-top" alt="Motherless Babies Home">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Visit to Motherless Babies Home</h5>
-                        <p class="card-text">Providing care and support to children without parents.</p>
+                        <p class="card-text flex-grow-1">Providing care and support to children without parents.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="card h-100 shadow">
                     <img src="./motherlessbby.jpeg" class="card-img-top" alt="Another Visit to Motherless Babies Home">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Second Visit to Motherless Babies Home</h5>
-                        <p class="card-text">Bringing gifts, food, and prayers to the children.</p>
+                        <p class="card-text flex-grow-1">Bringing gifts, food, and prayers to the children.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="card h-100 shadow">
                     <img src="./childrenlivingwithcancer.jpeg" class="card-img-top" alt="Children with Cancer">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Supporting Children with Cancer</h5>
-                        <p class="card-text">Providing encouragement and care to those in need.</p>
+                        <p class="card-text flex-grow-1">Providing encouragement and care to those in need.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="card h-100 shadow">
                     <img src="./clivinwithcancer2.jpeg" class="card-img-top" alt="Second Visit to Cancer Patients">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Follow-Up Visit to Cancer Patients</h5>
-                        <p class="card-text">Bringing continued support and prayers.</p>
+                        <p class="card-text flex-grow-1">Bringing continued support and prayers.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="card h-100 shadow">
                     <img src="./jesuswalk.jpeg" class="card-img-top" alt="Jesus Walk">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Jesus Walk</h5>
-                        <p class="card-text">Spreading the message of Christ in the community.</p>
+                        <p class="card-text flex-grow-1">Spreading the message of Christ in the community.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="card h-100 shadow">
                     <img src="./seminar.jpeg" class="card-img-top" alt="Seminar for Young People">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Empowering Young People</h5>
-                        <p class="card-text">Guiding the next generation through faith-based teachings.</p>
+                        <p class="card-text flex-grow-1">Guiding the next generation through faith-based teachings.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-  <!-- Call to Action -->
-<section class="cta-section text-center text-white">
-    <h2>Get Involved in Outreach</h2>
-    <p>Join us in making a difference in the lives of those in need.</p>
-    <a href="mailto:manifestlite91@gmail.com?subject=Join Fututre Outreach Ministry&body=Hello, I’d like to join the outreach program. Please provide more details." class="btn btn-lg btn-light">
-        Join Us
-    </a>
-</section>
+    <!-- Call to Action -->
+    <section class="cta-section text-center text-white mb-0">
+        <h2 class="mb-3">Get Involved in Outreach</h2>
+        <p class="mb-4">Join us in making a difference in the lives of those in need.</p>
+        <a href="mailto:manifestlite91@gmail.com?subject=Join Future Outreach Ministry&body=Hello, I’d like to join the outreach program. Please provide more details." class="btn btn-lg btn-light">
+            Join Us
+        </a>
+    </section>
 
 
-    <!-- Footer (Same as Other Pages) -->
-    <footer class="footer text-center p-3 bg-dark text-white">
-        <p>Follow Us:</p>
-            <div class="social-icons mb-3">
-                <a href="https://www.facebook.com/people/Manifest_lite/100064762178334/?mibextid=wwXIfr&rdid=4pIG3fJDXix7AtEb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DhQLwnkBU%2F%3Fmibextid%3DwwXIfr" target="_blank" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/manifest_lite01/" target="_blank" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UCUjBQhTtZYYz7IeLeSNTeeA" target="_blank" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
-            </div>
-        <p>&copy; 2025 Manifest Lite Ministries. All rights reserved.</p>
-        <p>Contact: manifestlite91@gmail.com | +2347087378900</p>
+    <!-- Footer (Standard) -->
+    <footer class="bg-black text-white text-center py-4">
+        <p>© 2025 Manifest Lite Ministries | manifestlite91@gmail.com | +2347087378900</p>
+        <div class="social-icons">
+            <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+        </div>
     </footer>
 
 </body>
