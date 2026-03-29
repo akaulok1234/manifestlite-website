@@ -562,3 +562,16 @@ body {
     border-radius: 0 0 10px 10px;
   }
 }
+/* Hide by default */
+.phone-video-note {
+  display: none;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Show only on phones */
+@media (max-width: 768px) {
+  .phone-video-note {
+    display: block;
+  }
+}
